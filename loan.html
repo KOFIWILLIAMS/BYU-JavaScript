@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+			<title>Title</title>
+			<script>
+			
+			/* Input: * Processing: * Output: */ 
+			
+			
+function doPayment ( ){
+
+let principal = parseFloat(document.getElementById('principal_input').value); 
+let annualRate = parseFloat(document.getElementById('anual_rate').value); 
+let years = parseFloat(document.getElementById('N_O_Y').value); 
+			let periodsPerYear = parseFloat(document.getElementById('P_P_Y').value); 
+			
+			let final_result = computePayment(principal, annualRate, years, periodsPerYear);
+			; 
+			document.getElementById('outputDiv').innerHTML = final_result;
+
+}
+
+function computePayment (principal, annualRate, years, periodsPerYear){
+let r = annualRate / periodsPerYear; 
+			let n = periodsPerYear * years; 
+			let p = (principal * r )/ 1 - Math.pow((1 + r), -n); 
+			let payment = p; 
+
+			return payment.toFixed(3);
+}
+
+function doBalance ( ){
+
+			let principal = parseFloat(document.getElementById('principal_input').value); 
+			let annualRate = parseFloat(document.getElementById('anual_rate').value); 
+			let years = parseFloat(document.getElementById('N_O_Y').value); 
+			let periodsPerYear = parseFloat(document.getElementById('P_P_Y').value); 
+			let numberOfPaymentPaidToDate = parseFloat(document.getElementById('N_O_P_P_T_D').value); 
+			
+			let final_r = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate);
+			
+			document.getElementById('output').innerHTML = final_r;
+
+}
+
+function computeBalance (principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate){
+
+			let r = annualRate / periodsPerYear; 
+			let n = periodsPerYear * years; 
+			payment = computePayment(principal, annualRate, years, periodsPerYear);
+			
+			let b = principal * Math.pow(1 + r, numberOfPaymentPaidToDate) - ((payment * (Math.pow(1 + r, numberOfPaymentPaidToDate) - 1)) / r);
+			
+			let payoff_amount  = b; 
+
+			return payoff_amount.toFixed(3);
+
+}
+
+			</script>
+		</head>
+		<body>
+			<h1>Please input details:</h1>
+			<br>
+				<br>Enter principal
+					<input type="text" id="principal_input">
+						<br>
+							<br>Enter annualRate
+								<input type="text" id="anual_rate">
+									<br>
+										<br>Enter years
+											<input type="text" id="N_O_Y">
+												<br>
+													<br>Enter periodsPerYear
+														<input type="text" id="P_P_Y">
+														<br>
+														<br>
+																	<button type="button" onclick="doPayment()">compute Payment</button>
+																	<br>
+																	<br>
+																	<div id="outputDiv"></div>
+													<br>Enter numberOfPaymentPaidToDate
+														<input type="text" id="N_O_P_P_T_D">
+															<br>
+																<button type="button" onclick="doBalance()">compute Balance</button>
+																
+																<br>
+																<div id="output"></div>
+																</body>
+															</html>
+

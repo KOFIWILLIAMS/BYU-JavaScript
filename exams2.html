@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+			<title>Title</title>
+			<script>
+			
+			/* Input: * Processing: * Output: */
+			
+			function startEndDivisor(){ 
+			
+			//Input 
+			let num1= parseFloat(document.getElementById("one").value); 
+			let num2 = parseFloat(document.getElementById("two").value);
+			
+			//process 
+			let output = "";
+			let sum = num1 + num2;
+			
+			if ((num1 && num2)> 5 ) || (sum > 20) ) {
+			output = "True";
+			} else {
+			output = "False";
+			}
+			
+			
+			// output 
+			document.getElementById("display").innerHTML = output;
+			</script>
+		</head>
+		<body>Start:
+			<input type="text" id="start" size="5">
+				<br>End:
+					<input type="text" id="end" size="5">
+						<br>Divisor:
+							<input type="text" id="divisor" size="5">
+								<br>
+									<button type="button" onclick="">Click</button>
+									<div id="output"/>
+								</body>
+							</html>

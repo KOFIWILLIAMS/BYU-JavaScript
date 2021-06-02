@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sum Of Odd Number</title>
+
+<script>
+
+function sumOfOddNumbers() {
+
+    let n_input = parseInt(document.getElementById('enterNumber').value);
+	
+            let totalSum = 0;
+            for (x = 1; x <= n_input; x++){
+                if (x % 2 == 1 ){
+                    totalSum += x;
+                }
+            }
+			document.getElementById('output_Div').innerHTML = totalSum;
+}
+</script>
+</head>
+
+<body>
+Please enter a number: <input type="text" id="enterNumber">
+<br>
+<br>
+<button type="button" onclick="sumOfOddNumbers()">Click to add all odd numbers</button>
+<br>
+<br>  
+<div id="output_Div"></div>  
+<br>
+<br>
+</body>
+</html>

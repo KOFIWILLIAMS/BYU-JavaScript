@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+			<title>Discount</title>
+			<script>
+			function c_Discount() { 
+			
+			var input_Text = parseFloat(document.getElementById('subtotal').value); 
+			var dayOfWeek = new Date().getDay(); 
+			var discount; 
+			var n_total; 
+			
+			if (input_Text > 50 && (dayofweek == 2 || 3)) { 
+			discount = (input_Text - (input_Text * .1)); 
+			n_total = discount + (discount * .6); 
+			} else { 
+			n_total = input_Text + (input_Text * .06); 
+			} 
+			var digits = 2;
+			
+			var multiplication = Math.pow(10, digits);
+			
+			var final_total = Math.round(n_total * multiplication) / multiplication; 
+			
+			 document.getElementById('output').innerHTML = final_total ; 
+			}
+			</script>
+		</head>
+		<body>
+			<h1>Retail Store Sales</h1>
+			Subtotal:
+			<input type="text" id="subtotal" size="6">
+				<br>
+					<br>
+						<button type="button" onclick="c_Discount()">Calculate</button>
+						<br>
+							<br>
+								<div id="output"></div>
+							</body>
+						</html>

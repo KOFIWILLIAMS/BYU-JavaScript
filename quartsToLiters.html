@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Quarts to Liters </title>
+        <script>
+            "use strict";
+            function QuartsToLiters(){
+
+            //Read quarts from user
+            let quarts = parseFloat(document.getElementById("nameInputBox").value);
+
+            //Convert quarts to liters
+             let liters = quarts * 0.95;
+           
+             //Round liters
+             let digist = 2;
+             let multiplier = Math.pow(10,digist);
+             liters = Math.round(liters * multiplier) / multiplier;
+
+             // Message to show
+             let result = liters + " (liters)" ;
+
+            //Display Message
+            document.getElementById("litersDiv").innerHTML = result;
+            }
+
+        </script>
+    </head>
+
+    <body> 
+        <h1>Quarts to Liters</h1>
+        <p>enter volume: <input type="text" id="nameInputBox"></p>
+        
+        <br>
+        <button type="button" onclick="QuartsToLiters()"> Convert </button>
+        <br>
+        <br>
+        <div id="litersDiv"></div>
+    </body>
+    
+</html>

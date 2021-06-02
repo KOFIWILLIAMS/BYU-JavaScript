@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+			<title>arrays</title>
+			<script>
+			
+/* Defining Table
+ * Input: no user input
+ * Processing: Test the addEnds and getMiddle functions by calling them.
+ * Output: The values returned from the addEnds and getMiddle functions.
+ */
+
+function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+    // Test the countEvens function by calling it two times.
+    let count1 = countEvens(list1);
+    let count2 = countEvens(list2);
+
+    // Test the multiply function by calling it two times.
+    let mult1 = multiply(list1,3);
+    let mult2 = multiply(list2,2);
+
+    // Build a string to display to the user.
+    let output =
+            count1 + '<br>' +
+            count2 + '<br>' +
+            mult1 + '<br>' +
+            mult2;
+
+    // Display the output string for the user to see.
+    document.getElementById('output').innerHTML = output;
+}
+
+function countEvens(list){
+ 
+    var evenNum = 0;
+               for(let i=0; i < list.length; i++){
+                   if (list[i]% 2 == 0){
+                       evenNum += 1;
+                   }
+               }
+               return evenNum
+
+}
+
+function multiply(list, multiplier){
+	 let List3 =[] ;
+            for ( i = 0; i < list.length; i++) {
+                let lt = list[i] * multiplier;
+                List3.push(lt);
+            }
+            return List3
+
+}
+			</script>
+			
+		</head>
+		<body>
+		
+			<button type="button" onclick="test()">Click</button>
+			<div id="output"></div>
+			
+		</body>
+	</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+                    <title>correct footwear for the day's weather</title>
+                    <script>function typeOfFoot() { 
+                    let weather = prompt('Type the weather for today'); 
+                    var footWear; 
+                    if (weather == "hot") { 
+                    footWear = "sandals"; } 
+                    else if (weather == "rain") { 
+                    footWear = "galoshes"; } 
+                    else if (weather == "snow") { 
+                    footWear = "boots"; } 
+                    else { footWear = "shoes"; } 
+                    
+                    let finalAnswer = " If it is " + weather + " then you have to wear " + footWear; 
+                    document.getElementById('footwearDiv').innerHTML = finalAnswer; 
+                    }
+                    </script>
+                </head>
+                <body>
+                    <h1>Hit Enter to check the footware for the season</h1>
+                        <br>
+                            <button type="button" onclick="typeOfFoot()">Enter</button>
+                            <br>
+                            <br>
+                                <div id="footwearDiv"></div>
+                            </body>
+                        </html>

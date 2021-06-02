@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+			<title>Volume of a Torus</title>
+			
+			<script>function computeForVolume(){ 
+			//Input 
+			let innerR = parseFloat(document.getElementById("inner").value); 
+			let outterR = parseFloat(document.getElementById("outer").value); 
+			
+			//process 
+			let finalVolume = ((Math.pow(Math.PI, 2))*(innerR + outterR)*(innerR - outterR)*(innerR - outterR))/4; 
+			
+			// output 
+			document.getElementById("Volume").innerHTML = finalVolume; 
+			}
+			</script>
+		</head>
+		<body>
+			<h1>Volume of a Torus</h1>
+			Inner radius
+			<input type="text" id="inner">
+				<br>Outer radius
+					<input type="text" id="outer">
+						<br>
+							<button type="button" onclick="computeForVolume()">cal. Volume</button>
+							<br>Volume <div id="Volume"></div>
+						</body>
+					</html>

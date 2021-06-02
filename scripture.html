@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+	<html lang="en-us">
+		<head>
+			<meta charset="utf-8">
+				<title>Applied Scripture</title>
+				<script>
+					
+					function applyScripture() {
+		
+					let name = document.getElementById('nameInputBox').value;
+					let scripture = "And I "+ name + " , am certain that God, who began the good work" +
+					"within you, will continue his work until it is finally finished" +
+					"on the day when Christ Jesus returns." ;
+					
+					document.getElementById('outputDiv').innerHTML = scripture;
+					}
+				</script>
+			</head>
+			<body>
+				Please enter your name: <input type="text" id="nameInputBox">
+					<button type="button" onclick="applyScripture()">Verse</button>
+					<div id="outputDiv"/>
+				</body>
+			</html>

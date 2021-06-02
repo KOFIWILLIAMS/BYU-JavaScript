@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+	<html lang="en-us">
+		<head>
+			<meta charset="utf-8">
+				<title> Multiplication Table</title>
+				<script>
+					function multiplicationTable(){
+					
+					var userINput =  document.getElementById("u_Input");
+					var digit = userINput.value;
+					var userOutput =  document.getElementById("display");
+					
+					for(let i = 0; i <= 12; i ++) {
+						userOutput.innerHTML += digit + " x " + i + " = " + (digit * i) + "<br/>";
+					}
+					
+					}
+				</script>
+			</head>
+			<body>
+				Enter a number <input type="text" id="u_Input" size = 3> 
+				<br>
+				<br>
+					<button type="button" onclick="multiplicationTable()">START!! </button>
+					<br>
+				<br>
+					<div id="display"></div>
+					</body>
+				</html> 

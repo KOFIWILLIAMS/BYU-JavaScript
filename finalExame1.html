@@ -1,0 +1,32 @@
+
+<!DOCTYPE HTML>
+	<html lang="en-us">
+		<head>
+			<meta charset="utf-8">
+				<title> Multiplication Table</title>
+				<script>
+					function FullName (){
+            
+					let given = "Williams";
+					let family = "Kofi";
+					
+					var output = makeFullName (given, family);
+                    
+					document.getElementById("display").innerHTML = output;
+					}
+					
+					function makeFullName (givenName , familyName){
+                
+                    return  (familyName + ", " + givenName);  
+					
+					}
+				</script>
+			</head>
+			<body>
+				
+					<button type="button" onclick="FullName()">Show Name </button>
+					<br>
+					<br>
+					<div id="display"></div>
+					</body>
+				</html> 

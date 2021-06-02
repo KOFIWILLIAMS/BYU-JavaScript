@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head> 
+  <meta charset="utf-8">
+  <title>Mileage</title>
+   <script>
+   /* input:a mileage of a car 
+    * processing:calculate the mileage and number of gallons used
+    * output: the mileage in miles per gallon
+    */
+    function convertingmile(){
+   
+      let Start = parseFloat(document.getElementById("startMiles").value;
+       let End = parseFloat(document.getElementById("Endmiles").value;
+      let Gas = parseFloat(document.getElementById("gpm").value;
+     
+      //calculation of mileage
+       let miles =end-start
+      let mpg=miles/gallons
+
+      //display message 
+        document.getElementById("milesDiv").innerHTML=gallonsTomiles;
+       //message to show
+      let message = "the miles per gallon = " ;
+       document.getElementById("messageDiv").innerHTML=message;
+}
+       </script>
+      <body>
+       <p>  starting milage <input type="text" id="startMiles?"></p>
+      <br>
+       <p> ending milage <input type="text" id="mpg"></p>
+       <br>
+        <p>amount of gas per mile <input type="text" id="gpm?"></p>
+       <br>
+        <button type="button" onclick="mileConvert()">result</button>
+      <br>
+      <div id="convert"></div
+     <div id="mileDiv"></div>       
+   </body>   
+ </html>

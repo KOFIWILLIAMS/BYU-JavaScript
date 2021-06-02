@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+			<title>arrays</title>
+			<script>
+			
+			/* Defining Table
+ * Input: no user input
+ * Processing: Test the addEnds and getMiddle functions by calling them.
+ * Output: The values returned from the addEnds and getMiddle functions.
+ */
+function averageBig() {
+    
+    let list1 =[ 70, 1010, 950, 2014, 6];
+	let list2 =[  -72.3, 3000, 873, 2312, 68, 7501.3 ];	
+	let list3 =[  70, 950, 671, 6 ];
+	
+    let output = averageBigr(list1) + "<br>"+
+					averageBigr(list2)+ "<br>"+
+					averageBigr(list3);
+	
+    // Display the output string for the user to see.
+    document.getElementById('output').innerHTML = output;
+}
+
+	function averageBigr(list) {
+            var evenNum = 0;
+			var avg = 0;
+			let result =0;
+               for(let i=0; i < list.length; i++){
+                   if (list[i] > 1000){
+                       evenNum += 1;
+					    avg += list[i];
+						result = avg / evenNum;
+                   }
+               }
+               return result.toFixed(1);
+            }
+		
+	
+			</script>
+			
+		</head>
+		<body>
+		
+			<button type="button" onclick="averageBig()">Click</button>
+			<div id="output"></div>
+			
+		</body>
+	</html>

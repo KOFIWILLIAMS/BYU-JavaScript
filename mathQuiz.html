@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>mathematics</title>
+
+<script>
+
+function checkIfIsCorrectOrNot() {
+    
+    // for the user input
+    let num1 = parseFloat(document.getElementById('num1').value);
+	let operator = document.getElementById('operator').value;
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let answer = parseFloat(document.getElementById('answer').value);
+	
+	// nested If
+            if (operator == '+') {
+                if ((num1 + num2) == answer) {
+                    test = true;
+                } else {
+                    test = false;
+                }
+            } else if (operator == '-') {
+                if ((num1 - num2) == answer) {
+                    test = true;
+                } else {
+                    test = false;
+                }
+            } else if (operator == '*') {
+                if ((num1 * num2) == answer) {
+                    test = true;
+                } else {
+                    test = false;
+                }
+            } else if (operator == '/') {
+                if ((num1 / num2) == answer) {
+                    test = true;
+                } else {
+                    test = false;
+                }
+            } else {
+                
+                document.getElementById('output').innerHTML = 'There was a mistake. Please try again.';
+            }
+
+            if (test != false) {
+                
+                document.getElementById('output').innerHTML = 'Correct! Good job!';
+            } else {
+           
+               document.getElementById('output').innerHTML = 'Incorrect! Try again!';
+            }
+
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Mathematics</h1>
+    <input type="text" id="num1" maxlength="3" size="3">
+    <input type="text" id="operator" maxlength="1" size="3">
+    <input type="text" id="num2" maxlength="3" size="3"> = 
+    <input type="text" id="answer" size="4">
+    <br>
+	<br>
+    <button onclick="checkIfIsCorrectOrNot()">Check</button>
+	<br>
+    <br>
+    <p id="output"></p>
+</body>
+</html>

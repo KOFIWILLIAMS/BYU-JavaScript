@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Alarm System</title>
+    
+    <script>
+            
+            function alarm(){
+                var now = new Date();
+                var month = now.getMonth();
+                var dayOfMonth = now.getDate();
+                var dayOfWeek = now.getDay();
+                
+
+if (dayOfWeek != 0 && dayOfWeek != 6 ) // a weekday
+{
+    if ((month == 11 && dayOfMonth == 25) || (month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4)) // a Holliday
+    {
+        alert('Sleep in. Today is a holliday');
+        document.getElementById('message').innerHTML ='Sleep in ' + now;
+    }
+    else{
+        alert('Get up');
+        document.getElementById('message').innerHTML = 'Get up ' + now;
+    }
+}
+else {
+    alert('Sleep in. Today is weekend');
+    document.getElementById('message').innerHTML = 'Seelp in ' + now;
+}
+    
+}
+        </script>
+    
+</head>
+<body>
+    <h1>When to Sleep or Get Up</h1>
+	<br>
+	<button onclick="alarm()">CAN I SLEEP TODAY?</button>
+    <h3> id="currentDay"></h3>
+    <h4> id="output"></h4>
+</body>
+</html>

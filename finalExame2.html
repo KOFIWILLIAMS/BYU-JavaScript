@@ -1,0 +1,30 @@
+
+<!DOCTYPE HTML>
+	<html lang="en-us">
+		<head>
+			<meta charset="utf-8">
+				<title> Compute Depreciation</title>
+				<script>
+					function depp (){
+            
+					var output = depreciation (1000.95,	950.47,	8);
+                    
+					document.getElementById("display").innerHTML = output;
+					}
+					
+					function depreciation (startValue, endValue, months){
+						var dep =(startValue - endValue)/ months;  
+						
+                    return dep.toFixed(2)  ;
+					
+					}
+				</script>
+			</head>
+			<body>
+				
+					<button type="button" onclick="depp()">Compute Depreciation </button>
+					<br>
+					<br>
+					<div id="display"></div>
+					</body>
+				</html> 

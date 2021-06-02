@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Display of Powers</title>
+    <script>
+          function all_Powers_of_two(){
+          
+               let rusult = ""
+let x = 0
+while (x <= 31){
+    rusult += Math.pow(2, x) +"," + "<br>";
+    x ++;
+}
+document.getElementById('final_result').innerHTML = rusult;
+           }
+    </script>
+</head>
+<body>
+ <p>Please Clieck Here To Display Powers</p>
+ <button type="button" onclick="all_Powers_of_two()">Go!</button>
+ <div id="final_result"></div>
+</body>
+</html>
+
